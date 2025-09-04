@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion</title>
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=WZkd9lzqEWa7&format=png&color=000000" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-auto cursiva fs-1" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title cursiva fs-1" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body text-start">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 cursiva fs-1">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#inicio">
+                                    <i class="bi bi-house-door-fill"></i> Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#contador">
+                                    <i class="bi bi-calendar-event"></i> Contador
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#ceremonia">
+                                    <i class="bi bi-heart-fill"></i> Ceremonia
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#comida">
+                                    <i class="bi bi-fork-knife"></i> Comida
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="page-container">
+            <!-- 🟢 Sección Inicio -->
+            <section id="inicio" class="hero d-flex align-items-center justify-content-center text-center text-light">
+                <video class="bg-video" src="assets/bg-video.mp4" 
+                    autoplay loop muted>
+                </video>
+                <div class="content">
+                    <h1 class="cursiva display-3 mb-4"><strong>Mis 50 Años</strong></h1>
+                    <h1 class="display-1">CELIA</h1>
+                    <p class="fs-3">"Hay momentos en la vida que son especiales por si solos."</p>
+                    <p class="fs-3">"Pero compartirlo con las personas que mas quiero lo convierte en momentos inolvidables."</p>
+                </div>
+            </section>
+
+            <!-- ⏳ Sección Contador -->
+            <section id="contador" class="contador text-center py-5">
+                <div class="container">
+                    <h2 class="cursiva display-5 mb-4">Falta para la Fiesta</h2>
+
+                    <div class="row align-items-center">
+                    <!-- 🌸 Flor izquierda -->
+                    <div class="col-2 d-none d-md-block text-start">
+                        <img src="https://i.etsystatic.com/54475936/r/il/3135e8/6640571428/il_fullxfull.6640571428_68ek.jpg" 
+                            alt="Flor izquierda" class="img-fluid">
+                    </div>
+
+                    <!-- ⏳ Contador -->
+                    <div class="col-12 col-md-8">
+                        <div id="countdown" class="d-flex justify-content-center gap-4 flex-wrap">
+                        <div class="count-box shadow p-3 rounded">
+                            <h3 id="days" class="display-4 fw-bold">0</h3>
+                            <p class="fs-5">Días</p>
+                        </div>
+                        <div class="count-box shadow p-3 rounded">
+                            <h3 id="hours" class="display-4 fw-bold">0</h3>
+                            <p class="fs-5">Horas</p>
+                        </div>
+                        <div class="count-box shadow p-3 rounded">
+                            <h3 id="minutes" class="display-4 fw-bold">0</h3>
+                            <p class="fs-5">Minutos</p>
+                        </div>
+                        <div class="count-box shadow p-3 rounded">
+                            <h3 id="seconds" class="display-4 fw-bold">0</h3>
+                            <p class="fs-5">Segundos</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- 🌸 Flor derecha -->
+                    <div class="col-2 d-none d-md-block text-end">
+                        <img src="https://i.etsystatic.com/54475936/r/il/3135e8/6640571428/il_fullxfull.6640571428_68ek.jpg" 
+                            alt="Flor derecha" class="img-fluid">
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ⛪🍽️ Sección Ceremonia y Comida -->
+            <section id="lugares" class="py-5 bg-light">
+                <div class="container">
+                    
+                    <div class="row g-4">
+                        <!-- Ceremonia -->
+                        <div class="col-md-6">
+                            
+                            <div class="card shadow-lg border-0 h-100">
+                                <br><h2 class="cursiva display-5 text-center mb-3">Ceremonia</h2>
+                                <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4npOA53TmPZCgzYVhxogNOZ1f90tfUeLqNwsSl4WuZ8x7QrJ0mewqSGgvmHk6-cp_7KE74BBY6MFaVLRIYgLLduqx09e7xKmLTFPMaiGq9KoXLVWVxDSekDq-WHElwIg3qI4KiTetw=s1360-w1360-h1020-rw" 
+                                    alt="Iglesia" class="card-img-top rounded-top">
+                                <div class="card-body text-center">
+                                <p class="fs-5">Santuario del Señor del Huerto - 13:00 pm</p>
+                                <p class="fs-5"></p>
+                                <a href="https://maps.app.goo.gl/87YkXAuzViKSNtfu8" 
+                                    target="_blank" class="btn-gray-cool px-4">
+                                    <i class="bi bi-geo-alt-fill"></i> Ver en Google Maps
+                                </a>
+                                </div><br>
+                            </div>
+                        </div>
+                        <!-- Comida -->
+                        <div class="col-md-6">
+                            
+                            <div class="card shadow-lg border-0 h-100">
+                                <br><h2 class="cursiva display-5 text-center mb-3">Comida</h2>
+                                <img src="https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/480926093_1175144244612837_6708288602873887062_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFOjUsaRJ5yqrDFu7zMwKYncb020RMvgWxxvTbREy-BbCjfNlkPYQyKp80v5H7JFLw_hPLInhOyfIDbYkuNxQyf&_nc_ohc=-jGypb7cFGoQ7kNvwEtYewU&_nc_oc=Adk0TF2B48j11SKJjOhZQK-algl-FMnd8zlvY8c6_mLKL6lOfnDH_OWkgebh2RNHNqw&_nc_zt=23&_nc_ht=scontent-qro1-1.xx&_nc_gid=OO_KAOeNUtqLCAjLmMqfXg&oh=00_AfYX2eQGJ37q5vSfeuVbypUvTLAxZ-VASN0mHCCSzfDa5A&oe=68BF93D4" alt="Salón" class="card-img-top rounded-top">
+                                <div class="card-body text-center">
+                                <p class="fs-5">Salón de eventos "Magic Fun" - 15:00</p>
+                                <a href="https://maps.app.goo.gl/NVoH6CiAzWhcPfa49" 
+                                    target="_blank" class="btn-gray-cool px-4">
+                                    <i class="bi bi-geo-alt-fill"></i> Ver en Google Maps
+                                </a>
+                                </div><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container my-4">
+                <div class="row align-items-center">
+                    
+                    <!-- Imagen izquierda -->
+                    <div class="col-3 d-none d-md-block text-start">
+                    <img src="assets/izquierda.png" alt="Flor izquierda" class="flor-lateral">
+                    </div>
+                    
+                    <!-- Formulario -->
+                    <div class="col-md-6 text-center">
+                    <form id="contactForm" class="formulario-blanco">
+                        <h1 class="cursiva text-center pb-3">Confirmar Asistencia</h1>
+
+                        <div class="mb-3">
+                        <label for="nombre" class="form-label cursiva fs-4">Nombre de la familia</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Fam. Soto Miguel" name="nombre" required />
+                        </div>
+
+                        <div class="mb-3">
+                        <label class="form-label cursiva fs-4">¿Asistirán?</label>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1" value="Si">
+                                <label class="form-check-label" for="radioDefault1">Super sí.</label>
+                            </div>
+                            </div>
+                            <div class="col-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" value="No">
+                                <label class="form-check-label" for="radioDefault2">Nel, pásenla super.</label>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <h4 class="cursiva mb-3">¿Cuántas personas asistirán?</h4>
+                        <select class="form-select mb-3" id="personas" name="personas" required>
+                        <option value="" selected disabled>Número de personas</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                        <option value="6">6 personas</option>
+                        <option value="7">7 personas</option>
+                        <option value="8">8 personas</option>
+                        <option value="9">9 personas</option>
+                        <option value="10">10 personas</option>
+                        </select>
+
+                        <div class="mb-3">
+                        <label for="mensaje" class="form-label cursiva fs-4">Comentarios y Felicitaciones</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn-gray-cool w-50">Enviar</button>
+                        </div>
+                    </form>
+                    </div>
+
+                    <!-- Imagen derecha -->
+                    <div class="col-3 d-none d-md-block text-end">
+                    <img src="assets/derecha.png" alt="Flor derecha" class="flor-lateral">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+        
+    <footer class="footer py-3 bg-dark">
+        <div class="container">
+            <p class="small mb-0 text-light text-center">
+                &copy; <script>document.write(new Date().getFullYear())</script> Derechos Reservados
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal de Respuesta -->
+    <div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title cursiva fs-1" id="responseModalLabel">Confirmación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage" class="fs-5"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+
+.cursiva {
+    font-family: 'Great Vibes', cursive;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: transparent; /* Para que use el fondo del body */
+    box-shadow: none;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f2f2;
+    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+    background-repeat: repeat;
+    font-weight: 400;
+}
+
+main {
+    flex: 1; /* empuja el footer hacia abajo */
+}
+
+.btn-gray-cool {
+    background-color: #000;     /* Negro elegante */
+    color: #fff;
+    border-radius: 1rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;                /* Espacio entre icono y texto */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-decoration: none;      /* Quitar subrayado */
+}
+
+.btn-gray-cool:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;     /* Le da un borde al hover */
+}
+
+
+.formulario-blanco {
+    background-color: #fff;              /* Fondo blanco */
+    border: 2px solid #f0f0f0;           /* Borde gris muy claro */
+    border-radius: 15px;                 /* Bordes redondeados */
+    padding: 30px;                       /* Espacio interno */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+.footer {
+    background: #17263C;
+}
+
+/* Hero con fondo */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Para que el video no se salga */
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* El video se ajusta al contenedor */
+}
+
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    /* 🎨 Dorado con degradado */
+    background: linear-gradient(90deg, #b8860b, #978832, #fff8dc, #ffd700, #b8860b);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    /* ✨ Brillo animado */
+    animation: shine 5s linear infinite;
+
+
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* Contador */
+.count-box {
+    width: 120px;
+    background: white;
+    border-radius: 12px;
+}
+
+/* Botones personalizados */
+.btn-personalizado{
+    background-color: #000000;
+    color: #fff;
+    border-radius: 1rem;
+    height: 3rem;
+    transition: 0.3s;
+}
+.btn-personalizado:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Fuente cursiva */
+.cursiva {
+    font-family: 'Great Vibes', cursive;
+}
+
+.card-img-top {
+    height: 300px;          /* Altura fija */
+    object-fit: cover;      /* Recorta sin deformar */
+    width: 100%;            /* Que ocupe todo el ancho */
+}
+
+
+.page-container {
+    background-color: #fff;
+    position: relative;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+
+.contador {
+    position: relative;
+    padding: 5rem 2rem;
+    background-color: #fff; /* Fondo limpio */
+    overflow: hidden;
+}
+
+/* Flor izquierda */
+.contador::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 200px;   /* Ajusta tamaño */
+    height: 300px;  /* Ajusta tamaño */
+    background: url("https://i.etsystatic.com/54475936/r/il/3135e8/6640571428/il_fullxfull.6640571428_68ek.jpg") 
+                no-repeat center/contain;
+    opacity: 0.9;
+}
+
+/* Flor derecha (misma imagen pero invertida horizontalmente) */
+.contador::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) scaleX(-1); /* voltea horizontal */
+    width: 200px;
+    height: 300px;
+    background: url("https://i.etsystatic.com/54475936/r/il/3135e8/6640571428/il_fullxfull.6640571428_68ek.jpg") 
+                no-repeat center/contain;
+    opacity: 0.9;
+}
+
+.flor-lateral {
+    width: 100%;      /* que no se desborde de su columna */
+    max-width: 100%; /* controla el tamaño máximo */
+    height: auto;
+}
+
+
+
+@media (max-width: 768px) {
+    .content {
+        font-size: 3rem; /* tamaño más manejable en móvil */
+        padding: 1rem;
+    }
+    .content h1 {
+        font-size: 2.5rem; /* títulos principales */
+    }
+    .content p {
+        font-size: 1.2rem; /* párrafos */
+    }
+}
+
+@media (max-width: 576px) {
+    .page-container, .contador {
+        padding: 1.5rem 1rem;
+    }
+
+    .count-box {
+        width: 90px; /* reduce el contador en pantallas pequeñas */
+    }
+    .contador::before,
+    .contador::after {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .formulario-blanco {
+        padding: 15px;
+    }
+}
+
