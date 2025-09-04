@@ -87,14 +87,14 @@ main {
     margin-bottom: 1rem;
 
     /* 🎨 Dorado con degradado */
-    background: linear-gradient(90deg, #b8860b, #978832, #fff8dc, #ffd700, #b8860b);
+    background: linear-gradient(90deg, #b8860b, #978832, #000000, #ffd700, #b8860b);
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 
     /* ✨ Brillo animado */
-    animation: shine 5s linear infinite;
+    animation: shine 10s linear infinite;
 
 
 }
