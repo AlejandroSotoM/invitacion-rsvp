@@ -89,3 +89,28 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("seconds").textContent = Math.floor((distance % (1000 * 60)) / 1000);
     }, 1000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const envelope = document.getElementById("envelope");
+    const overlay = document.getElementById("overlay");
+    const musica = document.getElementById("musica"); // 🎵 tu <audio>
+
+    envelope.addEventListener("click", () => {
+        envelope.classList.add("open");
+
+        // 🎵 Inicia la música al abrir el sobre
+        musica.play().catch(err => {
+            console.log("El navegador bloqueó el autoplay hasta que el usuario interactúe:", err);
+        });
+
+        // ⏳ Espera 2 segundos y quita overlay
+        setTimeout(() => {
+            overlay.classList.add("fade-out");
+
+            // Después de la animación, quita el overlay de la vista
+            setTimeout(() => {
+                overlay.style.display = "none";
+            }, 1000);
+        }, 2000);
+    });
+});
