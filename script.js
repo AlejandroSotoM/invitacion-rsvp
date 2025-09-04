@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    const video = document.querySelector(".bg-video");
+
+    if (window.innerWidth < 768) { // celulares
+        video.src = "assets/bg-video-vertical.mp4";
+    } else {
+        video.src = "assets/bg-video.mp4";
+    }
+
     const radioSi = document.getElementById("radioDefault1");
     const radioNo = document.getElementById("radioDefault2");
     const selectPersonas = document.getElementById("personas");
