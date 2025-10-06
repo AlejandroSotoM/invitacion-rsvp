@@ -33,11 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("contactForm").addEventListener("submit", async function (e) {
         e.preventDefault();
-
-        const Familia_nombre = document.getElementById("nombre").value.trim();
+        const Persona_nombre = document.getElementById("nombre_").value.trim().toUpperCase();
+        const Familia_nombre = document.getElementById("nombre").value.trim().toUpperCase();
         const asistencia = radioSi.checked ? "Sí" : "No";
         const personas = asistencia === "Sí" ? selectPersonas.value : 0;
-        const mensaje = document.getElementById("mensaje").value;
+        const mensaje = document.getElementById("mensaje").value.toUpperCase();
 
         // FORMSPREE - Aquí colocas tu endpoint de Formspree
         const formspreeURL = "https://formspree.io/f/xvgbvkkj"; // <-- cámbialo
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Content-Type": "application/json",
                     Accept: "application/json",
                 },
-                body: JSON.stringify({ Familia_nombre, asistencia, personas, mensaje }),
+                body: JSON.stringify({ Persona_nombre, Familia_nombre, asistencia, personas, mensaje }),
             });
 
             if (response.ok) {
